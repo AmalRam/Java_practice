@@ -1,0 +1,36 @@
+public static void main(String[] args) {
+      // System.out.print(getInput());
+        String searchString,firstString,secondString;
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Input Search String:");
+        searchString=sc.nextLine();
+        System.out.println("Input first String:");
+        firstString=sc.nextLine();
+        System.out.println("Input Search String:");
+        secondString=sc.nextLine();
+        System.out.println(searchString.contains(firstString));
+        System.out.println(searchString.contains(secondString));
+       // System.out.println(searchString.indexOf(firstString));
+       // System.out.println(searchString.indexOf(secondString));
+        int index1=searchString.indexOf(firstString);
+        int index2=searchString.indexOf(secondString);
+        boolean string1Check=searchString.contains(firstString);
+        boolean string2Check= searchString.contains(secondString);
+
+        if(firstString.isEmpty() || secondString.isEmpty())
+        {
+            System.out.println("Empty string or null");
+        }
+        else if(string1Check==false || string2Check==false)
+        {
+            System.out.println("Not found");
+        }
+
+        else if(index2>index1)
+        {
+            System.out.println("Found as expected");
+        }
+
+
+    }
+
